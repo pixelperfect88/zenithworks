@@ -1,4 +1,4 @@
-# CLAUDE.md - ZenithWorks Hospitality
+# Plan - ZenithWorks Hospitality
 
 ## Project Overview
 
@@ -12,7 +12,7 @@ ZenithWorks Hospitality is a corporate website for a hospitality management comp
 
 ```
 zenithworks/
-├── CLAUDE.md            # AI assistant guide (this file)
+├── plan.md              # Project plan & guide (this file)
 ├── index.html           # Home page — hero, services overview, about preview, stats, testimonial, CTA
 ├── about.html           # About Us — company story, mission/vision/values, differentiators, leadership
 ├── services.html        # Services — overview grid + 12 detailed service sections
@@ -137,4 +137,4 @@ _Not yet configured. Update this section when CI/CD pipelines are set up._
 - The contact form currently simulates submission (no backend) — update `js/main.js` when a real endpoint is available
 - Image placeholders use inline SVG icons and CSS gradients — replace with actual images when available
 - Do not add unnecessary complexity or over-engineer solutions
-- Keep this CLAUDE.md file up to date as the project evolves
+- Keep this plan.md file up to date as the project evolves
