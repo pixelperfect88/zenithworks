@@ -1,12 +1,12 @@
 /**
- * ZenithWorks Hospitality - Main JavaScript
+ * Zenith Tech Works — Main JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', function () {
 
   // --- Mobile Navigation Toggle ---
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
+  var menuToggle = document.getElementById('menuToggle');
+  var navLinks = document.getElementById('navLinks');
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', function () {
@@ -14,19 +14,27 @@ document.addEventListener('DOMContentLoaded', function () {
       navLinks.classList.toggle('active');
     });
 
-    // Close mobile menu when a link is clicked
+    // Close mobile menu on link click
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         menuToggle.classList.remove('active');
         navLinks.classList.remove('active');
       });
     });
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
   }
 
-  // --- Header scroll effect (only for home page with transparent header) ---
-  const header = document.getElementById('header');
+  // --- Header scroll effect ---
+  var header = document.getElementById('header');
 
-  if (header && !header.classList.contains('scrolled')) {
+  if (header && !header.classList.contains('solid')) {
     window.addEventListener('scroll', function () {
       if (window.scrollY > 60) {
         header.classList.add('scrolled');
@@ -36,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // --- Scroll-triggered animations ---
+  // --- Scroll-triggered fade-in animations ---
   var animatedElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
 
   if (animatedElements.length > 0 && 'IntersectionObserver' in window) {
@@ -48,15 +56,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.12,
+      rootMargin: '0px 0px -30px 0px'
     });
 
     animatedElements.forEach(function (el) {
       observer.observe(el);
     });
   } else {
-    // Fallback: show everything if IntersectionObserver not supported
+    // Fallback: show everything immediately
     animatedElements.forEach(function (el) {
       el.classList.add('visible');
     });
@@ -81,7 +89,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function animateCounter(el) {
-    var target = parseInt(el.getAttribute('data-target'), 10);
+    var target = parseFloat(el.getAttribute('data-target'));
+    var suffix = el.getAttribute('data-suffix') || '+';
+    var isDecimal = String(target).indexOf('.') !== -1;
     var duration = 2000;
     var startTime = null;
 
@@ -90,11 +100,22 @@ document.addEventListener('DOMContentLoaded', function () {
       var progress = Math.min((timestamp - startTime) / duration, 1);
       // Ease out cubic
       var eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(eased * target);
+      var current = eased * target;
+
+      if (isDecimal) {
+        el.textContent = current.toFixed(1);
+      } else {
+        el.textContent = Math.floor(current);
+      }
+
       if (progress < 1) {
         requestAnimationFrame(step);
       } else {
-        el.textContent = target + '+';
+        if (isDecimal) {
+          el.textContent = target.toFixed(1) + suffix;
+        } else {
+          el.textContent = target + suffix;
+        }
       }
     }
 
@@ -117,21 +138,39 @@ document.addEventListener('DOMContentLoaded', function () {
       // Simulate form submission
       setTimeout(function () {
         submitBtn.textContent = 'Message Sent!';
-        submitBtn.style.backgroundColor = '#2ecc71';
-        submitBtn.style.borderColor = '#2ecc71';
-        submitBtn.style.color = '#ffffff';
+        submitBtn.style.background = '#00c9a7';
+        submitBtn.style.borderColor = '#00c9a7';
+        submitBtn.style.color = '#0d1b2a';
         contactForm.reset();
 
         setTimeout(function () {
           submitBtn.textContent = originalText;
           submitBtn.disabled = false;
-          submitBtn.style.backgroundColor = '';
+          submitBtn.style.background = '';
           submitBtn.style.borderColor = '';
           submitBtn.style.color = '';
         }, 3000);
       }, 1500);
     });
   }
+
+  // --- Newsletter form ---
+  var newsletterForms = document.querySelectorAll('.newsletter-form');
+  newsletterForms.forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = form.querySelector('input');
+      var btn = form.querySelector('button');
+      if (input && input.value) {
+        var origHTML = btn.innerHTML;
+        btn.innerHTML = '&#10003;';
+        input.value = '';
+        setTimeout(function () {
+          btn.innerHTML = origHTML;
+        }, 2000);
+      }
+    });
+  });
 
   // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
@@ -142,9 +181,23 @@ document.addEventListener('DOMContentLoaded', function () {
       var targetEl = document.querySelector(targetId);
       if (targetEl) {
         e.preventDefault();
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var headerHeight = header ? header.offsetHeight : 0;
+        var targetPos = targetEl.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
       }
     });
   });
+
+  // --- Handle anchor scrolling from other pages ---
+  if (window.location.hash) {
+    setTimeout(function () {
+      var targetEl = document.querySelector(window.location.hash);
+      if (targetEl) {
+        var headerHeight = header ? header.offsetHeight : 0;
+        var targetPos = targetEl.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+      }
+    }, 300);
+  }
 
 });

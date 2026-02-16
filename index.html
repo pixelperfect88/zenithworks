@@ -3,312 +3,522 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ZenithWorks Hospitality delivers a full suite of Hospitality Management Services to branded and independent properties, driving growth, profitability, and guest satisfaction.">
-  <title>ZenithWorks Hospitality | Restaurant & Hospitality Management</title>
+  <title>Zenith Tech Works — Complete IT Solutions</title>
+  <meta name="description" content="Zenith Tech Works provides comprehensive IT solutions including consulting, managed services, cloud, cybersecurity, automation, and development.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <span class="logo-text">Zenith<span>Works</span></span>
-      </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact Us</a>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Zenith<span class="logo-accent">Tech Works</span></a>
+
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="solutions.html" class="nav-link dropdown-toggle">
+              Solutions
+              <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="solutions.html#consulting">IT Consulting &amp; Advisory</a></li>
+              <li><a href="solutions.html#managed-services">Managed Services</a></li>
+              <li><a href="solutions.html#cloud">Cloud Services</a></li>
+              <li><a href="solutions.html#cybersecurity">Cyber Security</a></li>
+              <li><a href="solutions.html#automation">Automation</a></li>
+              <li><a href="solutions.html#web-development">Web Development</a></li>
+              <li><a href="solutions.html#mobile-development">Mobile Development</a></li>
+              <li><a href="solutions.html#efficiency">Gaining Efficiency</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="industries.html" class="nav-link">Industries</a></li>
+          <li class="nav-item"><a href="why-us.html" class="nav-link">Why Us</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link btn-nav">Contact</a></li>
+        </ul>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
       </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-pattern"></div>
-    <div class="hero-content">
-      <div class="hero-badge">Hospitality Excellence</div>
-      <h1>Elevating Hospitality <span>Performance</span></h1>
-      <p>With a hands-on approach backed by decades of hospitality experience, ZenithWorks Hospitality delivers a full suite of management services to both branded and independent properties.</p>
-      <div class="hero-buttons">
-        <a href="services.html" class="btn btn-primary">Our Services</a>
-        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-text fade-in">
+        <span class="badge">Complete IT Solutions</span>
+        <h1>We Manage Your IT, So You Can Manage Your <span class="highlight">Business</span></h1>
+        <p class="hero-desc">Take charge of your business continuity with innovative IT solutions. We combine technology expertise with exceptional service to help you thrive.</p>
+        <div class="hero-buttons">
+          <a href="solutions.html" class="btn btn-primary">Explore Solutions</a>
+          <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="hero-visual fade-in fade-in-right">
+        <div class="hero-illustration">
+          <!-- Server / Cloud SVG Illustration -->
+          <svg viewBox="0 0 480 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="illustration-svg">
+            <!-- Cloud shape -->
+            <path d="M340 120c0-44.183-35.817-80-80-80-34.66 0-64.153 22.036-75.27 52.892C178.588 88.342 171.04 86 163 86c-26.51 0-48 21.49-48 48 0 2.04.128 4.048.374 6.018C93.29 145.63 78 164.87 78 188c0 28.72 23.28 52 52 52h200c33.137 0 60-26.863 60-60 0-29.917-21.882-54.73-50.48-59.27C341.12 131.9 340 125.58 340 120z" fill="url(#cloudGrad)" opacity="0.15"/>
+            <path d="M340 120c0-44.183-35.817-80-80-80-34.66 0-64.153 22.036-75.27 52.892C178.588 88.342 171.04 86 163 86c-26.51 0-48 21.49-48 48 0 2.04.128 4.048.374 6.018C93.29 145.63 78 164.87 78 188c0 28.72 23.28 52 52 52h200c33.137 0 60-26.863 60-60 0-29.917-21.882-54.73-50.48-59.27C341.12 131.9 340 125.58 340 120z" stroke="url(#cloudStroke)" stroke-width="2"/>
+            <!-- Server rack -->
+            <rect x="150" y="200" width="180" height="160" rx="12" fill="url(#serverGrad)" stroke="url(#cloudStroke)" stroke-width="2"/>
+            <!-- Server slots -->
+            <rect x="166" y="216" width="148" height="36" rx="6" fill="#1a1f36" opacity="0.6"/>
+            <rect x="166" y="264" width="148" height="36" rx="6" fill="#1a1f36" opacity="0.6"/>
+            <rect x="166" y="312" width="148" height="36" rx="6" fill="#1a1f36" opacity="0.6"/>
+            <!-- Drive indicators -->
+            <circle cx="186" cy="234" r="5" fill="#22c55e"><animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/></circle>
+            <circle cx="202" cy="234" r="5" fill="#22c55e" opacity="0.7"/>
+            <rect x="250" y="228" width="50" height="4" rx="2" fill="#4f5d7a"/>
+            <rect x="250" y="238" width="36" height="4" rx="2" fill="#4f5d7a"/>
+            <circle cx="186" cy="282" r="5" fill="#3b82f6"><animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/></circle>
+            <circle cx="202" cy="282" r="5" fill="#22c55e"/>
+            <rect x="250" y="276" width="50" height="4" rx="2" fill="#4f5d7a"/>
+            <rect x="250" y="286" width="36" height="4" rx="2" fill="#4f5d7a"/>
+            <circle cx="186" cy="330" r="5" fill="#22c55e"/>
+            <circle cx="202" cy="330" r="5" fill="#3b82f6"><animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/></circle>
+            <rect x="250" y="324" width="50" height="4" rx="2" fill="#4f5d7a"/>
+            <rect x="250" y="334" width="36" height="4" rx="2" fill="#4f5d7a"/>
+            <!-- Connection lines from server to cloud -->
+            <line x1="240" y1="200" x2="240" y2="170" stroke="url(#cloudStroke)" stroke-width="2" stroke-dasharray="6 4"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
+            <line x1="200" y1="200" x2="180" y2="170" stroke="url(#cloudStroke)" stroke-width="2" stroke-dasharray="6 4"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.8s" repeatCount="indefinite"/></line>
+            <line x1="280" y1="200" x2="300" y2="170" stroke="url(#cloudStroke)" stroke-width="2" stroke-dasharray="6 4"><animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite"/></line>
+            <!-- Floating data dots -->
+            <circle cx="240" cy="185" r="3" fill="#6366f1"><animate attributeName="cy" values="195;165" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="1.5s" repeatCount="indefinite"/></circle>
+            <circle cx="190" cy="185" r="3" fill="#8b5cf6"><animate attributeName="cy" values="195;165" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="1.8s" repeatCount="indefinite"/></circle>
+            <circle cx="290" cy="185" r="3" fill="#06b6d4"><animate attributeName="cy" values="195;165" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/></circle>
+            <defs>
+              <linearGradient id="cloudGrad" x1="78" y1="40" x2="390" y2="240" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/>
+              </linearGradient>
+              <linearGradient id="cloudStroke" x1="78" y1="40" x2="390" y2="360" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/>
+              </linearGradient>
+              <linearGradient id="serverGrad" x1="150" y1="200" x2="330" y2="360" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1e2440"/><stop offset="1" stop-color="#131829"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
       </div>
     </div>
+
     <div class="scroll-indicator">
       <span>Scroll</span>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-      </svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
     </div>
   </section>
 
-  <!-- Services Overview -->
-  <section class="section section-light">
+  <!-- ========== SOLUTIONS OVERVIEW ========== -->
+  <section class="section section-light" id="solutions">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">What We Do</span>
-        <h2>Comprehensive Hospitality Solutions</h2>
-        <p>Through strategic consulting and collaborative partnerships with owners, we drive business growth, profitability, and guest satisfaction.</p>
+        <span class="section-label">Our Solutions</span>
+        <h2>Comprehensive IT Solutions</h2>
+        <p class="section-intro">We deliver end-to-end technology services tailored to your unique business needs, helping you stay competitive in an ever-evolving digital landscape.</p>
       </div>
-      <div class="services-grid">
-        <!-- Service Card 1 -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+
+      <div class="solutions-grid">
+        <!-- Card 1: IT Consulting -->
+        <div class="solution-card fade-in">
+          <div class="solution-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
             </svg>
           </div>
-          <h3>Pre-Opening Management</h3>
-          <p>Expert corporate team bringing deep expertise in successful restaurant openings and property transitions, from recruitment to operational planning.</p>
-          <a href="services.html" class="learn-more">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
+          <h3>IT Consulting &amp; Advisory</h3>
+          <p>Strategic technology guidance to align your IT infrastructure with business goals and drive sustainable growth.</p>
+          <a href="solutions.html#consulting" class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
-        <!-- Service Card 2 -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+
+        <!-- Card 2: Managed Services -->
+        <div class="solution-card fade-in">
+          <div class="solution-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <circle cx="12" cy="12" r="3"/>
             </svg>
           </div>
-          <h3>Revenue Management</h3>
-          <p>Advanced revenue management approach with deep market research, dynamic pricing, and competitive benchmarking for optimal revenue generation.</p>
-          <a href="services.html" class="learn-more">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
+          <h3>Managed Services</h3>
+          <p>Proactive monitoring, maintenance, and management of your entire IT environment so you can focus on core business.</p>
+          <a href="solutions.html#managed-services" class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
-        <!-- Service Card 3 -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+
+        <!-- Card 3: Cloud Services -->
+        <div class="solution-card fade-in">
+          <div class="solution-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 15a5 5 0 005 5h9a7 7 0 10-6.646-9.266A4.5 4.5 0 002 15z"/>
             </svg>
           </div>
-          <h3>Accounting & Financial</h3>
-          <p>Accurate and transparent financial reporting that supports budgeting, forecasting, and ROI-focused decision-making for your properties.</p>
-          <a href="services.html" class="learn-more">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
+          <h3>Cloud Services</h3>
+          <p>Seamless cloud migration, architecture design, and optimization across AWS, Azure, and Google Cloud platforms.</p>
+          <a href="solutions.html#cloud" class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
-        <!-- Service Card 4 -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+
+        <!-- Card 4: Cyber Security -->
+        <div class="solution-card fade-in">
+          <div class="solution-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
             </svg>
           </div>
-          <h3>Human Resources</h3>
-          <p>Strategic HR solutions, training, and leadership development to strengthen restaurant teams and improve guest experience outcomes.</p>
-          <a href="services.html" class="learn-more">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
+          <h3>Cyber Security</h3>
+          <p>Comprehensive threat protection, vulnerability assessments, and compliance solutions to safeguard your digital assets.</p>
+          <a href="solutions.html#cybersecurity" class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
-        <!-- Service Card 5 -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+
+        <!-- Card 5: Automation -->
+        <div class="solution-card fade-in">
+          <div class="solution-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
           </div>
-          <h3>Sales & Marketing</h3>
-          <p>Positioning each restaurant to maximize exposure, increase market share, and boost revenue through customer retention and acquisition strategies.</p>
-          <a href="services.html" class="learn-more">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
+          <h3>Automation</h3>
+          <p>Streamline workflows and eliminate repetitive tasks with intelligent process automation and RPA solutions.</p>
+          <a href="solutions.html#automation" class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
-        <!-- Service Card 6 -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+
+        <!-- Card 6: Web Development -->
+        <div class="solution-card fade-in">
+          <div class="solution-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
             </svg>
           </div>
-          <h3>Information Technology</h3>
-          <p>Tailored IT solutions that improve operational efficiency, guest experience, and security for modern restaurant performance.</p>
-          <a href="services.html" class="learn-more">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          <h3>Web Development</h3>
+          <p>Custom web applications, responsive websites, and enterprise portals built with modern frameworks and best practices.</p>
+          <a href="solutions.html#web-development" class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Card 7: Mobile Development -->
+        <div class="solution-card fade-in">
+          <div class="solution-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18"/>
             </svg>
-          </a>
+          </div>
+          <h3>Mobile Development</h3>
+          <p>Native and cross-platform mobile apps that deliver seamless user experiences on iOS and Android devices.</p>
+          <a href="solutions.html#mobile-development" class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Card 8: Gaining Efficiency -->
+        <div class="solution-card fade-in">
+          <div class="solution-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3>Gaining Efficiency</h3>
+          <p>Optimize operations with data-driven insights, lean IT practices, and continuous improvement methodologies.</p>
+          <a href="solutions.html#efficiency" class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Preview -->
-  <section class="section">
+  <!-- ========== ABOUT SPLIT SECTION ========== -->
+  <section class="section split-section" id="about">
+    <div class="container split-inner">
+      <div class="split-visual fade-in">
+        <div class="split-illustration">
+          <!-- Building / Team SVG -->
+          <svg viewBox="0 0 440 380" fill="none" xmlns="http://www.w3.org/2000/svg" class="illustration-svg">
+            <!-- Building -->
+            <rect x="120" y="60" width="200" height="280" rx="8" fill="url(#bldgGrad)" stroke="#6366f1" stroke-width="2"/>
+            <!-- Windows grid -->
+            <rect x="148" y="90" width="32" height="28" rx="4" fill="#6366f1" opacity="0.3"/>
+            <rect x="196" y="90" width="32" height="28" rx="4" fill="#6366f1" opacity="0.5"/>
+            <rect x="248" y="90" width="32" height="28" rx="4" fill="#06b6d4" opacity="0.3"/>
+            <rect x="148" y="136" width="32" height="28" rx="4" fill="#06b6d4" opacity="0.4"/>
+            <rect x="196" y="136" width="32" height="28" rx="4" fill="#6366f1" opacity="0.3"/>
+            <rect x="248" y="136" width="32" height="28" rx="4" fill="#6366f1" opacity="0.5"/>
+            <rect x="148" y="182" width="32" height="28" rx="4" fill="#6366f1" opacity="0.5"/>
+            <rect x="196" y="182" width="32" height="28" rx="4" fill="#06b6d4" opacity="0.3"/>
+            <rect x="248" y="182" width="32" height="28" rx="4" fill="#6366f1" opacity="0.3"/>
+            <rect x="148" y="228" width="32" height="28" rx="4" fill="#6366f1" opacity="0.3"/>
+            <rect x="196" y="228" width="32" height="28" rx="4" fill="#6366f1" opacity="0.4"/>
+            <rect x="248" y="228" width="32" height="28" rx="4" fill="#06b6d4" opacity="0.5"/>
+            <!-- Door -->
+            <rect x="195" y="290" width="50" height="50" rx="6" fill="#1a1f36"/>
+            <circle cx="238" cy="315" r="3" fill="#6366f1"/>
+            <!-- Ground -->
+            <line x1="60" y1="340" x2="380" y2="340" stroke="#6366f1" stroke-width="2" opacity="0.3"/>
+            <!-- Antenna -->
+            <line x1="220" y1="60" x2="220" y2="30" stroke="#6366f1" stroke-width="2"/>
+            <circle cx="220" cy="24" r="6" fill="none" stroke="#6366f1" stroke-width="2"/>
+            <circle cx="220" cy="24" r="2" fill="#6366f1"/>
+            <!-- Signal waves -->
+            <path d="M206 16a20 20 0 0028 0" stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.5"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="2s" repeatCount="indefinite"/></path>
+            <path d="M200 10a28 28 0 0040 0" stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.3"><animate attributeName="opacity" values="0.3;0.1;0.3" dur="2.5s" repeatCount="indefinite"/></path>
+            <!-- People silhouettes (abstract) -->
+            <circle cx="90" cy="310" r="12" fill="#6366f1" opacity="0.25"/>
+            <rect x="80" y="325" width="20" height="15" rx="6" fill="#6366f1" opacity="0.2"/>
+            <circle cx="350" cy="310" r="12" fill="#06b6d4" opacity="0.25"/>
+            <rect x="340" y="325" width="20" height="15" rx="6" fill="#06b6d4" opacity="0.2"/>
+            <circle cx="60" cy="320" r="10" fill="#8b5cf6" opacity="0.2"/>
+            <rect x="52" y="333" width="16" height="7" rx="4" fill="#8b5cf6" opacity="0.15"/>
+            <defs>
+              <linearGradient id="bldgGrad" x1="120" y1="60" x2="320" y2="340" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1e2440"/><stop offset="1" stop-color="#131829"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <div class="split-text fade-in">
+        <span class="section-label">Who We Are</span>
+        <h2>Your Trusted Technology Partner</h2>
+        <p>Zenith Tech Works is a full-service IT solutions company dedicated to helping businesses harness the power of technology. We partner with organizations of all sizes to deliver tailored solutions that drive efficiency, innovation, and competitive advantage.</p>
+        <p>Our team of certified professionals brings deep expertise across every major technology domain. From strategic consulting to hands-on implementation, we are committed to your long-term success.</p>
+
+        <ul class="check-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Certified professionals across all major platforms
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Proven track record with enterprise clients
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Dedicated support teams available around the clock
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Scalable solutions that grow with your business
+          </li>
+        </ul>
+
+        <a href="why-us.html" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS BAR ========== -->
+  <section class="section section-dark stats-section" id="stats">
     <div class="container">
-      <div class="about-preview">
-        <div class="about-image fade-in-left">
-          <div class="about-image-placeholder">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"/>
-            </svg>
-          </div>
-          <div class="experience-badge">
-            <span class="number">20+</span>
-            <span class="label">Years of<br>Experience</span>
-          </div>
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Clients Served</span>
         </div>
-        <div class="about-content fade-in-right">
-          <span class="section-label">Who We Are</span>
-          <h2>Decades of Hospitality Leadership</h2>
-          <p>ZenithWorks Hospitality delivers a full suite of Hospitality Management Services to both branded and independent properties. Through strategic restaurant consulting and collaborative partnerships with owners, we drive business growth, profitability, and guest satisfaction.</p>
-          <p>Anchored in sustainable value and exceptional performance, our hands-on approach ensures every property reaches its full potential.</p>
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-              </svg>
-              Strategic Consulting
-            </div>
-            <div class="highlight-item">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-              </svg>
-              Operational Excellence
-            </div>
-            <div class="highlight-item">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-              </svg>
-              Revenue Optimization
-            </div>
-            <div class="highlight-item">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-              </svg>
-              Guest Satisfaction
-            </div>
-          </div>
-          <a href="about.html" class="btn btn-outline-dark">Learn More About Us</a>
+        <div class="stat-item fade-in">
+          <span class="stat-number" data-target="99.9">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Uptime Guaranteed</span>
+        </div>
+        <div class="stat-item fade-in">
+          <span class="stat-number-text">24/7</span>
+          <span class="stat-label">Support Available</span>
+        </div>
+        <div class="stat-item fade-in">
+          <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Experience</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Stats Bar -->
-  <section class="section-dark">
-    <div class="container">
-      <div class="stats-bar">
-        <div class="stat-item fade-in">
-          <div class="stat-number" data-target="150">0</div>
-          <div class="stat-label">Properties Managed</div>
-        </div>
-        <div class="stat-item fade-in">
-          <div class="stat-number" data-target="20">0</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-item fade-in">
-          <div class="stat-number" data-target="500">0</div>
-          <div class="stat-label">Team Members</div>
-        </div>
-        <div class="stat-item fade-in">
-          <div class="stat-number" data-target="98">0</div>
-          <div class="stat-label">Client Satisfaction %</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section">
+  <!-- ========== INDUSTRIES ========== -->
+  <section class="section" id="industries">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">Testimonials</span>
-        <h2>What Our Partners Say</h2>
-        <p>Hear from owners and operators who have experienced the ZenithWorks difference firsthand.</p>
+        <span class="section-label">Industries We Serve</span>
+        <h2>Solutions Across Every Sector</h2>
+        <p class="section-intro">We understand the unique challenges and regulatory requirements of diverse industries, delivering specialized IT solutions that make a measurable impact.</p>
       </div>
-      <div class="testimonials-slider fade-in">
-        <div class="testimonial">
-          <p class="testimonial-text">ZenithWorks transformed our restaurant operations from the ground up. Their hands-on approach and deep industry knowledge helped us achieve record profitability within the first year of partnership.</p>
-          <p class="testimonial-author">James Mitchell</p>
-          <p class="testimonial-role">Restaurant Owner & Operator</p>
+
+      <div class="industries-grid">
+        <!-- Healthcare -->
+        <div class="industry-card fade-in">
+          <div class="industry-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3>Healthcare</h3>
+          <p>HIPAA-compliant solutions, EHR integration, telehealth platforms, and secure patient data management.</p>
+        </div>
+
+        <!-- Manufacturing -->
+        <div class="industry-card fade-in">
+          <div class="industry-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 20h20M5 20V10l7-5 7 5v10"/><rect x="9" y="14" width="6" height="6"/><line x1="12" y1="14" x2="12" y2="20"/>
+            </svg>
+          </div>
+          <h3>Manufacturing</h3>
+          <p>IoT-enabled production monitoring, supply chain optimization, and industrial automation solutions.</p>
+        </div>
+
+        <!-- Education -->
+        <div class="industry-card fade-in">
+          <div class="industry-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+            </svg>
+          </div>
+          <h3>Education</h3>
+          <p>Learning management systems, campus network infrastructure, and student information platforms.</p>
+        </div>
+
+        <!-- Finance -->
+        <div class="industry-card fade-in">
+          <div class="industry-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <h3>Finance</h3>
+          <p>Secure transaction systems, regulatory compliance, fraud detection, and fintech application development.</p>
+        </div>
+
+        <!-- Consulting -->
+        <div class="industry-card fade-in">
+          <div class="industry-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <h3>Consulting</h3>
+          <p>Collaborative tools, project management platforms, and knowledge management systems for consultancies.</p>
+        </div>
+
+        <!-- Nonprofits -->
+        <div class="industry-card fade-in">
+          <div class="industry-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <h3>Nonprofits</h3>
+          <p>Cost-effective IT solutions, donor management systems, and digital outreach platforms for mission-driven organizations.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="hero-bg"></div>
+  <!-- ========== TESTIMONIAL ========== -->
+  <section class="section section-light" id="testimonial">
     <div class="container">
-      <h2 class="fade-in">Ready to Elevate Your Property?</h2>
-      <p class="fade-in">Partner with ZenithWorks Hospitality and unlock the full potential of your restaurant or hospitality business.</p>
-      <div class="hero-buttons fade-in">
-        <a href="contact.html" class="btn btn-primary">Contact Us Today</a>
-        <a href="services.html" class="btn btn-outline">Explore Services</a>
+      <div class="testimonial-wrapper fade-in">
+        <div class="testimonial-card">
+          <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" opacity="0.15">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z"/>
+          </svg>
+          <blockquote>
+            <p>&ldquo;Zenith Tech Works transformed our entire IT infrastructure. Their team delivered a seamless cloud migration, reduced our operational costs by 40%, and provided the kind of ongoing support that makes you feel like they are truly an extension of your own team. They don&rsquo;t just solve problems &mdash; they anticipate them.&rdquo;</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="author-title">CEO, Technology Company</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- ========== PARTNERS STRIP ========== -->
+  <section class="partners-strip">
+    <div class="container">
+      <p class="partners-label">Trusted by Industry Leaders</p>
+      <div class="partners-logos">
+        <div class="partner-logo-text">CloudAxis</div>
+        <div class="partner-logo-text">NovaBridge</div>
+        <div class="partner-logo-text">PulseGrid</div>
+        <div class="partner-logo-text">VectorEdge</div>
+        <div class="partner-logo-text">Stratiform</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="section cta-section" id="cta">
+    <div class="container cta-inner fade-in">
+      <h2>Ready to Transform Your IT?</h2>
+      <p>Partner with Zenith Tech Works and unlock the full potential of your technology investments. Let us build the foundation for your digital future.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-white">Get Started</a>
+        <a href="solutions.html" class="btn btn-outline-white">View Solutions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo-text">Zenith<span>Works</span></div>
-          <p>Delivering exceptional hospitality management services with a hands-on approach backed by decades of industry experience.</p>
+        <!-- Column 1: Brand -->
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">Zenith<span class="logo-accent">Tech Works</span></a>
+          <p class="footer-desc">Complete IT solutions to help businesses innovate, scale, and thrive in the digital age. Your trusted technology partner from strategy to execution.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="footer-column">
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
           <h4>Quick Links</h4>
-          <ul>
+          <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="why-us.html">Why Us</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-column">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="services.html">Pre-Opening</a></li>
-            <li><a href="services.html">Operations</a></li>
-            <li><a href="services.html">Revenue Management</a></li>
-            <li><a href="services.html">F&B Management</a></li>
-            <li><a href="services.html">IT Solutions</a></li>
+
+        <!-- Column 3: Solutions -->
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.html#consulting">IT Consulting</a></li>
+            <li><a href="solutions.html#managed-services">Managed Services</a></li>
+            <li><a href="solutions.html#cloud">Cloud Services</a></li>
+            <li><a href="solutions.html#cybersecurity">Cyber Security</a></li>
+            <li><a href="solutions.html#automation">Automation</a></li>
+            <li><a href="solutions.html#web-development">Web Development</a></li>
           </ul>
         </div>
-        <div class="footer-column footer-newsletter">
-          <h4>Stay Updated</h4>
-          <p>Subscribe to our newsletter for industry insights and company updates.</p>
-          <form class="newsletter-form" onsubmit="return false;">
-            <input type="email" placeholder="Your email address" required>
-            <button type="submit" aria-label="Subscribe">&#10132;</button>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-desc">Stay updated with the latest in IT solutions and industry insights.</p>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Your email address" aria-label="Email address" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
           </form>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 ZenithWorks Hospitality. All rights reserved.</p>
-        <div class="footer-bottom-links">
+        <p>&copy; 2026 Zenith Tech Works. All rights reserved.</p>
+        <div class="footer-legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
         </div>
